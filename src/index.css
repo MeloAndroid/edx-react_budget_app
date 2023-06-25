@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div.currency-selector button, div.currency-selector button:hover, div.currency-selector ul {
+    background-color: greenyellow;
+}
+div.currency-selector button.active {
+    background-color: white;
+    color: black;
+}

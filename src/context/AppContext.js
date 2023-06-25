@@ -112,6 +112,24 @@ export const AppProvider = (props) => {
         remaining = state.budget - totalExpenses;
     }
 
+    let currencyName = '';
+    switch (state.currency) {
+        case '$':
+            currencyName = 'Dollar';
+            break;
+        case '£':
+            currencyName = 'Pound';
+            break;
+        case '€':
+            currencyName = 'Euro';
+            break;
+        case '₹':
+            currencyName = 'Ruppee';
+            break;
+        default:
+            currencyName = '';
+    }
+
     return (
         <AppContext.Provider
             value={{
@@ -119,7 +137,8 @@ export const AppProvider = (props) => {
                 budget: state.budget,
                 remaining: remaining,
                 dispatch,
-                currency: state.currency
+                currency: state.currency,
+                currencyName: currencyName,
             }}
         >
             {props.children}
