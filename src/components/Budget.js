@@ -39,7 +39,7 @@ const Budget = () => {
                     id='budget'
                     value={budget}
                     width='10'
-                    style={{ marginLeft: '0.2rem'}}
+                    style={{ marginLeft: '0.2rem', width: '100px'}}
                     onChange={handleChangeBudget}>
                 </input>
             </span>

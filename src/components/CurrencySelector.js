@@ -15,7 +15,7 @@ const CurrencySelector = () => {
         <div>
             <div className="dropdown currency-selector">
                 <button className="btn dropdown-toggle" type="button" id="currencyMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                    Currency {currency} {currencyName}
+                    Currency ({currency} {currencyName})
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="currencyMenu">
                     <li><button className={`dropdown-item ${currency === '$' ? 'active' : ''}`} onClick={() => changeCurrency('$')}>$ Dollar</button></li>
